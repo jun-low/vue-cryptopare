@@ -1,28 +1,41 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <template>
+  <div id="app" class="container mx-auto p-4 font-mono">
+    <h1 class="text-2xl text-gray-800 text-center">Cryptocurrency Compare</h1>
+    <div class="container mx-auto">
+      <div class="bg-gray-200 m-12 p-12 antialiased text-center font-hairline">
+        <p>
+          This website indexes the top 10 cryptocurrencies by market cap (how
+          much the sum of all coins is collectively worth), and gives you an easy
+          way to compare cryptocurrency performance and rank over the daily.
+        </p>
+      </div>
+    </div>
+    <crypto></crypto>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import crypto from "./components/crypto";
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    crypto
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+td img {
+  width: 25px;
+}
+
+.jumbotron p {
+  font-size: 1.2em;
+}
+
+.jumbotron {
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
 </style>
