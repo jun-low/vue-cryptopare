@@ -1,31 +1,31 @@
 <template>
-  <div class="row">
-    <div class="col-md-8">
-      <table class="table is-bordered is-striped is-hoverable is-fullwidth">
-        <thead>
-          <tr class="is-selected">
-            <th>#</th>
-            <th>Coin</th>
-            <th>Name</th>
-            <th>Market Cap</th>
-            <th>Price</th>
-            <th>Volume (24h)</th>
-            <th>Circulating Supply</th>
-            <th>Open (24h)</th>
-            <th>Change PCT (24h)</th>
+  <div class="w-full mx-auto p-4">
+    <div class="container">
+      <table class="table-fixed border-2 border-gray-500">
+        <thead class="border-b border-gray-400 text-gray-800">
+          <tr class="font-bold text-sm">
+            <th class="bg-gray-400 px-4 py-2 text-gray-800">#</th>
+            <th class="bg-gray-400 px-4 py-2 text-gray-800">Coin</th>
+            <th class="bg-gray-400 px-4 py-2 text-gray-800">Name</th>
+            <th class="w-1/5 bg-gray-400 px-4 py-2 text-gray-800">Market Cap</th>
+            <th class="w-1/5 bg-gray-400 px-4 py-2 text-gray-800">Price</th>
+            <th class="w-1/5 bg-gray-400 px-4 py-2 text-gray-800">Volume (24h)</th>
+            <th class="w-1/4 bg-gray-400 px-4 py-2 text-gray-800">Circulating Supply</th>
+            <th class="w-1/5 bg-gray-400 px-4 py-2 text-gray-800">Open (24h)</th>
+            <th class="bg-gray-400 px-4 py-2 text-gray-800">Change PCT (24h)</th>
           </tr>
         </thead>
-        <tbody>
-          <tr v-for="(value, key, index) in coins" :key="index">
+        <tbody class="text-sm py-2">
+          <tr class="hover:bg-gray-200" v-for="(value, key, index) in coins" :key="index">
             <th>{{index+1}}</th>
-            <td><img :src="'https://www.cryptocompare.com' + value.USD.IMAGEURL" width="50" height="25"/></td>
-            <td>{{key}}</td>
-            <td>{{value.USD.MKTCAP}}</td>
-            <td>{{value.USD.PRICE}}</td>
-            <td>{{value.USD.VOLUME24HOUR}}</td>
-            <td>{{value.USD.SUPPLY}}</td>
-            <td>{{value.USD.OPEN24HOUR}}</td>
-            <td :style="getColor(value.USD.CHANGEPCT24HOUR)">{{value.USD.CHANGEPCT24HOUR}}</td>
+            <td class="px-4"><img :src="'https://www.cryptocompare.com' + value.USD.IMAGEURL" width="50" height="25"/></td>
+            <td class="px-4">{{key}}</td>
+            <td class="px-4">{{value.USD.MKTCAP}}</td>
+            <td class="px-4">{{value.USD.PRICE}}</td>
+            <td class="px-4">{{value.USD.VOLUME24HOUR}}</td>
+            <td class="px-4">{{value.USD.SUPPLY}}</td>
+            <td class="px-4">{{value.USD.OPEN24HOUR}}</td>
+            <td class="px-4" :style="getColor(value.USD.CHANGEPCT24HOUR)">{{value.USD.CHANGEPCT24HOUR}}</td>
           </tr>
         </tbody>
       </table>
