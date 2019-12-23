@@ -1,6 +1,6 @@
 # crypto-compare
 
-This website indexes the 10 cryptocurrencies by [market cap](https://coinmarketcap.com) (how much the sum of all coins is collectively worth), and gives you an easy way to compare cryptocurrency performance and results every 10 seconds.
+This website indexes the 10 cryptocurrencies by [market cap](https://coinmarketcap.com) (how much the sum of all coins is collectively worth), and gives users an easy way to compare cryptocurrency performance and results in every 10 seconds.
 
 👉 https://crypto-compare.now.sh/
 
@@ -27,7 +27,7 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Build with
+## Build with
 - Vue - Front-end framework
 - MarketCap API - API for getting coins data
 - Axios - Performing GET request for API
@@ -36,5 +36,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Autoprefixer - Parse CSS and add vendor prefixes to CSS
 - Unit testing with Jest or Mocha from Vue CLI build-in options
 
-### Contributing
+## Contributing
 Bug reports and pull requests are welcome on Github 😊
