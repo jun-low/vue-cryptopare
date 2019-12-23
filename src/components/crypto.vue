@@ -1,7 +1,7 @@
 <template>
   <div class="w-full mx-auto p-4">
     <div class="container">
-      <table class="table-fixed border-2 border-gray-500">
+      <table class="table-fixed border-2 border-gray-500 text-left">
         <thead class="border-b border-gray-400 text-gray-800">
           <tr class="font-bold text-sm">
             <th class="bg-gray-400 px-4 py-2 text-gray-800">#</th>
@@ -17,7 +17,7 @@
         </thead>
         <tbody class="text-sm py-2">
           <tr class="hover:bg-gray-200" v-for="(value, key, index) in coins" :key="index">
-            <th>{{index+1}}</th>
+            <th class="px-4">{{index+1}}</th>
             <td class="px-4"><img :src="'https://www.cryptocompare.com' + value.USD.IMAGEURL" width="50" height="25"/></td>
             <td class="px-4">{{key}}</td>
             <td class="px-4">{{value.USD.MKTCAP}}</td>
