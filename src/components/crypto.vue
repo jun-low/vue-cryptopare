@@ -37,8 +37,6 @@
 import axios from 'axios';
 
 const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
-// const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com";
-// const BASE_IMAGE_URL = "https://www.cryptocompare.com"
 
 export default {
   name: 'crypto',
@@ -55,34 +53,15 @@ export default {
     }, 10000);
   },
   methods: {
-    // getCoinData() {
-    //   axios.get(COINMARKETCAP_API_URI + "/v1/ticker/?limit=10")
-    //   .then((response) => {
-    //     console.log('got coinmarket Data')
-    //     this.coins = response.data;
-    //     console.log(response.data); //
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
-    // },
     getCoins() {
       axios.get(CRYPTOCOMPARE_API_URI + '/data/pricemultifull?fsyms=BTC,XRP,ETH,EOS,BCH,LTC,BNB,USDT,DASH,DOGE&tsyms=USD,EUR')
       .then(response => {
         this.coins = response.data.DISPLAY
-        // console.log(response)
       })
       .catch(error => {
         console.log(error);
       })
     },
-    // getCoinImage: function(symbol) {
-    //   try {
-    //     return BASE_IMAGE_URL + this.coinData[symbol].USD.IMAGEURL;
-    //   } catch (err) {
-    //     return "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
-    //   }
-    // },
     getColor: (num) => {
       return num >= 0 ? "color:green;" : "color:red;";
     },
