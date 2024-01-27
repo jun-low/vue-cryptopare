@@ -39,7 +39,7 @@ import axios from 'axios';
 const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
 
 export default {
-  name: 'crypto',
+  name: 'crypto-app',
   data() {
     return {
       coins: [],
